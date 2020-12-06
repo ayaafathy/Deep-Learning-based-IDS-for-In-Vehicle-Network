@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8626546e-ba83-4899-af6b-f1815b7babbe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Deep-Learning-based-IDS-for-In-Vehicle-Network.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InceptionV4Code.py" beforeDir="false" afterPath="$PROJECT_DIR$/Proof of concept/InceptionV4Code.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,10 +13,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/InceptionV4Code.py">
+        <entry file="file://$PROJECT_DIR$/Proof of concept/InceptionV4Code.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1926">
-              <caret line="115" selection-start-line="115" selection-end-line="115" />
+            <state relative-caret-position="126">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -28,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-5" />
     <option name="width" value="649" />
     <option name="height" value="735" />
@@ -39,7 +37,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Deep-Learning-based-IDS-for-In-Vehicle-Network" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Deep-Learning-based-IDS-for-In-Vehicle-Network" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -72,7 +80,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/InceptionV4Code.py" />
+      <option name="SCRIPT_NAME" value="E:\Projects\Deep-Learning-based-IDS-for-In-Vehicle-Network\Proof of concept\InceptionV4Code.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -93,6 +101,14 @@
       <option name="presentableId" value="Default" />
       <updated>1607248504578</updated>
     </task>
+    <task id="LOCAL-00001" summary="device configuration">
+      <created>1607248848630</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607248848630</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -117,11 +133,15 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="device configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="device configuration" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/InceptionV4Code.py">
+    <entry file="file://$PROJECT_DIR$/Proof of concept/InceptionV4Code.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1926">
-          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        <state relative-caret-position="126">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>

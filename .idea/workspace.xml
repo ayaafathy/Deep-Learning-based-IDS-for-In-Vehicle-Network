@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8626546e-ba83-4899-af6b-f1815b7babbe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Deep-Learning-based-IDS-for-In-Vehicle-Network.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Deep-Learning-based-IDS-for-In-Vehicle-Network.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datasets/file.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Datasets/file.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lstm/lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/lstm/lstm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

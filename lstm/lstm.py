@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[4]:
-
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -15,19 +12,13 @@ from keras.layers import Dense
 from keras.layers import LSTM
 from keras.layers import Dropout
 from keras.callbacks import EarlyStopping
-from keras.models import load_model
 from keras import optimizers
 
 
-# Load dataseting data
+# Load dataset
 train = pd.read_csv(r"E:\University\GP\LSTM\Datasets\file.csv")
-train.head(100000)
-
-
-# In[4]:
-
-
-train.describe()
+# train.head(100000)
+# train.describe()
 
 
 # # Scale features
@@ -90,7 +81,7 @@ train.describe()
 
 # Scale features
 s1 = MinMaxScaler(feature_range=(-1,1))
-Xs = s1.fit_transform(train[['Time','IntID1', 'IntID2', 'DLC', 'IntData1','IntData2','IntData3','IntData4','IntData5','IntData6', 'IntData7','IntData8', 'Label']])
+Xs = s1.fit_transform(train[['IntID1', 'IntID2', 'DLC', 'IntData1','IntData2','IntData3','IntData4','IntData5','IntData6', 'IntData7','IntData8', 'Label']])
 
 # Scale predicted value
 s2 = MinMaxScaler(feature_range=(0,1))

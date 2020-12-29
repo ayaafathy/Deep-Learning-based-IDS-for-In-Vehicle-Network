@@ -115,7 +115,7 @@ es = EarlyStopping(monitor='loss',mode='min',verbose=1,patience=10)
 
 # Fit (and time) LSTM model
 t0 = time.time()
-history = model.fit(X, Y, epochs = 20, batch_size = 512, validation_split=0.4, callbacks=[es], verbose=1)
+history = model.fit(X, Y, epochs = 20, batch_size = 512, validation_split=0.2, callbacks=[es], verbose=1)
 t1 = time.time()
 print('Runtime: %.2f s' %(t1-t0))
 
@@ -123,7 +123,7 @@ print('Runtime: %.2f s' %(t1-t0))
 plt.figure(figsize=(8,4))
 plt.semilogy(history.history['loss'])
 plt.xlabel('epoch'); plt.ylabel('loss')
-plt.savefig('tclab_loss.png')
+plt.savefig('loss.png')
 model.save('model.h5')
 
 # Verify the fit of the model

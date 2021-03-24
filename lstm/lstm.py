@@ -16,7 +16,7 @@ from keras import optimizers
 
 
 # Load dataset
-train = pd.read_csv(r"E:\University\GP\LSTM\Datasets\file.csv")
+train = pd.read_csv(r"C:\Users\Mostafa\PycharmProjects\Deep-Learning-based-IDS-for-In-Vehicle-Network\Datasets\file.csv")
 # train.head(100000)
 # train.describe()
 

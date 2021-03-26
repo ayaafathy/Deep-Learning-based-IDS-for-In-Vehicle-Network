@@ -10,11 +10,12 @@ Original file is located at
 #importing libraries
 import pandas as pd
 import numpy as np
+import tensorflow as tf
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import LSTM
-from keras.layers import Dropout
 from keras import optimizers
+
 
 # Load training and testing dataset
 train = pd.read_csv("https://raw.githubusercontent.com/ayaafathy/Deep-Learning-based-IDS-for-In-Vehicle-Network/main/Datasets/FinalDataset2.csv")
@@ -40,10 +41,6 @@ test_set, testlabels = np.array(test_set), np.array(testlabels)
 features_set = np.reshape(features_set, (features_set.shape[0], features_set.shape[1], 1))
 test_set = np.reshape(test_set, (test_set.shape[0], test_set.shape[1], 1))
 
-
-
-
-
 # LSTM Model Strucutre & Hyperparameters
 model = Sequential()
 model.add(LSTM(128, return_sequences=False,  activation='sigmoid', input_shape=(features_set.shape[1], 1)))
@@ -52,18 +49,30 @@ opt = optimizers.Adam(lr=0.0001)
 model.compile(optimizer = opt , loss = 'sparse_categorical_crossentropy', metrics = ['accuracy'])
 
 #Training Model on the Training Dataset
- model.fit(features_set, labels, epochs = 40, batch_size = 512)
+model.fit(features_set, labels, epochs = 40, batch_size = 512)
 
 #Testing the model on the test dataset
 result=model.predict(test_set, verbose=1)
 #result=model.predict_classes(test_set, verbose=1) ///deprecated
 
+#@title
 #Transforming Result into a readable array
 z = np.argmax(result,axis=1)
 
+#@title
 print(z)
 
 #Downloading a CSV file with the array to compare with original predictions and evaluate performance
-from google.colab import files
-np.savetxt("finalattempt.csv", z, delimiter=",")
-files.download('finalattempt.csv')
+#from google.colab import files
+#np.savetxt("finalattempt.csv", z, delimiter=",")
+#files.download('finalattempt.csv')
+
+model.save(r"C:\Users\Omar\Downloads")
+
+
+converter = tf.lite.TFLiteConverter.from_keras_model(model)
+tflite_model = converter.convert()
+
+with open('model.tflite', 'wb') as f:
+  f.write(tflite_model)
+

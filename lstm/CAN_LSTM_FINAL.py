@@ -52,8 +52,10 @@ model.compile(optimizer = opt , loss = 'sparse_categorical_crossentropy', metric
 model.fit(features_set, labels, epochs = 40, batch_size = 512)
 
 #Testing the model on the test dataset
-result=model.predict(test_set, verbose=1)
 #result=model.predict_classes(test_set, verbose=1) ///deprecated
+result=model.predict(test_set, verbose=1)
+results = model.evaluate(test_set, testlabels)
+
 
 #@title
 #Transforming Result into a readable array
@@ -64,7 +66,7 @@ print(z)
 
 #Downloading a CSV file with the array to compare with original predictions and evaluate performance
 #from google.colab import files
-#np.savetxt("finalattempt.csv", z, delimiter=",")
+np.savetxt(r"C:\Users\Omar\Downloads\finalattempt.csv", z, delimiter=",")
 #files.download('finalattempt.csv')
 
 model.save(r"C:\Users\Omar\Downloads")

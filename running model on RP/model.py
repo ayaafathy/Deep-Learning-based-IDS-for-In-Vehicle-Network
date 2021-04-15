@@ -21,7 +21,7 @@ output_details = interpreter.get_output_details()
 input_shape = input_details[0]['shape']
 
 # print("inputshape",input_shape)
-input_data = np.array(np.random.random_sample(input_shape), dtype=np.float32)
+#input_data = np.array(np.random.random_sample(input_shape), dtype=np.float32)
 
 # Test the model on specific packets manually
 
@@ -35,7 +35,7 @@ input_data = np.array(np.random.random_sample(input_shape), dtype=np.float32)
 # input_data = np.array([0.000271,128.0,0.0,8.0,0.0,23.0,220.0,9.0,22.0,17.0,22.0,187.0], dtype=np.float32)
 
 # fUZZY
-# input_data = np.array([259.050627,339.0,0.0,8.0,0.0,161.0,32.0,255.0,0.0,255.0,48.0,239.0], dtype=np.float32)
+input_data = np.array([259.050627,339.0,0.0,8.0,0.0,161.0,32.0,255.0,0.0,255.0,48.0,239.0], dtype=np.float32)
 
 
 input_data = input_data.reshape(1, 12, 1)

@@ -10,15 +10,16 @@ Original file is located at
 #importing libraries
 import pandas as pd
 import numpy as np
-import tensorflow as tf
+import matplotlib.pyplot as plt
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import LSTM
+from keras.layers import Dropout
 from keras import optimizers
-
 
 # Load training and testing dataset
 train = pd.read_csv("https://raw.githubusercontent.com/ayaafathy/Deep-Learning-based-IDS-for-In-Vehicle-Network/main/Datasets/FinalDataset2.csv")
+
 test = pd.read_csv("https://raw.githubusercontent.com/ayaafathy/Deep-Learning-based-IDS-for-In-Vehicle-Network/main/Datasets/testdataset.csv")
 
 #Selecting the features to be trained
@@ -44,37 +45,61 @@ test_set = np.reshape(test_set, (test_set.shape[0], test_set.shape[1], 1))
 # LSTM Model Strucutre & Hyperparameters
 model = Sequential()
 model.add(LSTM(128, return_sequences=False,  activation='sigmoid', input_shape=(features_set.shape[1], 1)))
+model.add(Dropout(0.5))
 model.add(Dense(4, activation='softmax'))
 opt = optimizers.Adam(lr=0.0001)
 model.compile(optimizer = opt , loss = 'sparse_categorical_crossentropy', metrics = ['accuracy'])
 
 #Training Model on the Training Dataset
-model.fit(features_set, labels, epochs = 40, batch_size = 512)
+history = model.fit(features_set, labels, validation_split=0.2, epochs = 100, batch_size = 256)
+
+# list all data in history
+print(history.history.keys())
+
+# summarize history for accuracy
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
+
+# summarize history for loss
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('model loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
 
 #Testing the model on the test dataset
 #result=model.predict_classes(test_set, verbose=1) ///deprecated
-result=model.predict(test_set, verbose=1)
+#result=model.predict(test_set, verbose=1)
 results = model.evaluate(test_set, testlabels)
+model.save("my_model")
+
 
 
 #@title
 #Transforming Result into a readable array
-z = np.argmax(result,axis=1)
+#z = np.argmax(results,axis=1)
 
 #@title
-print(z)
+#print(z)
 
 #Downloading a CSV file with the array to compare with original predictions and evaluate performance
 #from google.colab import files
-np.savetxt(r"C:\Users\Omar\Downloads\finalattempt.csv", z, delimiter=",")
+#np.savetxt("finalattempt.csv", z, delimiter=",")
 #files.download('finalattempt.csv')
 
-model.save(r"C:\Users\Omar\Downloads")
 
+import tensorflow as tf
 
+# Convert the model
 converter = tf.lite.TFLiteConverter.from_keras_model(model)
 tflite_model = converter.convert()
 
 with open('model.tflite', 'wb') as f:
   f.write(tflite_model)
-

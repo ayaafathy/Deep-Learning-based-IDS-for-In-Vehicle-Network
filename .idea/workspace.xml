@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8626546e-ba83-4899-af6b-f1815b7babbe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/running model on RP/client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/running model on RP/model3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/running model on RP/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/running model on RP/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/running model on RP/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/running model on RP/model2.py" beforeDir="false" afterPath="$PROJECT_DIR$/running model on RP/model2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +65,9 @@
     <option name="height" value="735" />
   </component>
   <component name="ProjectId" id="1mIdFChHA8morQ8gfLJKzWjNA7S" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -101,6 +108,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/InceptionV4Code.py" />
@@ -111,7 +119,28 @@
       <recent name="E:\Projects\Deep-Learning-based-IDS-for-In-Vehicle-Network\Proof of concept" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ids">
+  <component name="RunManager" selected="Python.server">
+    <configuration name="CAN_LSTM_FINAL" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Deep-Learning-based-IDS-for-In-Vehicle-Network" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lstm" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lstm/CAN_LSTM_FINAL.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="InceptionV4Code" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Deep-Learning-based-IDS-for-In-Vehicle-Network" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -175,13 +204,61 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Deep-Learning-based-IDS-for-In-Vehicle-Network" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/running model on RP" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/running model on RP/server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="socketProvider" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Deep-Learning-based-IDS-for-In-Vehicle-Network" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/running model on RP" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/running model on RP/socketProvider.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.InceptionV4Code" />
       <item itemvalue="Python.ids" />
       <item itemvalue="Python.lstm" />
+      <item itemvalue="Python.CAN_LSTM_FINAL" />
+      <item itemvalue="Python.socketProvider" />
+      <item itemvalue="Python.server" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.server" />
+        <item itemvalue="Python.socketProvider" />
+        <item itemvalue="Python.CAN_LSTM_FINAL" />
         <item itemvalue="Python.ids" />
         <item itemvalue="Python.lstm" />
       </list>
@@ -255,6 +332,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="device configuration" />
     <MESSAGE value="separate folder for POOC" />
     <option name="LAST_COMMIT_MESSAGE" value="separate folder for POOC" />

@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8626546e-ba83-4899-af6b-f1815b7babbe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/running model on RP/client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/running model on RP/model3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/running model on RP/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Datasets/AnyConv.com__FinalDataset2.dbf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Script.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adjusted script.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/~$Script.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/~$justed script.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/~WRL0005.tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/~WRL2920.tmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/running model on RP/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/running model on RP/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running model on RP/model2.py" beforeDir="false" afterPath="$PROJECT_DIR$/running model on RP/model2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +115,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/InceptionV4Code.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>

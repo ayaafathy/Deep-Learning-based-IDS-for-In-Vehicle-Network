@@ -23,12 +23,14 @@ output_details = interpreter.get_output_details()
 input_shape = input_details[0]['shape']
 
 # print("inputshape",input_shape)
-#input_data = np.array(np.random.random_sample(input_shape), dtype=np.float32)
+
+
+input_data = np.array(np.random.random_sample(input_shape), dtype=np.float32)
 
 # Test the model on specific packets manually
 
 # Impersonating
-input_data = np.array([1481193271.0,1088.0,0.0,8.0,255.0,240.0,0.0,0.0,255.0,8.0,9.0,0.0], dtype=np.float32)
+#input_data = np.array([1481193271.0,1088.0,0.0,8.0,255.0,240.0,0.0,0.0,255.0,8.0,9.0,0.0], dtype=np.float32)
 
 # DOS
 #input_data = np.array([0.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0], dtype=np.float32)
@@ -59,30 +61,32 @@ output_data = interpreter.get_tensor(output_details[0]['index'])
 
 maxindex = output_data.argmax()
 
-if maxindex == 0:
-    red = LED(23)
-    print("Benign Packet")
-    print("--- %s seconds ---" % (time.time() - start_time))
-    while True:
-        red.on()
-        sleep(1)
-        break
 
-elif maxindex == 1:
-    blue = LED(24)
-    print("DOS Attack")
+
+if maxindex == 0:
+    blue = LED(16)
+    print("Benign Packet")
     print("--- %s seconds ---" % (time.time() - start_time))
     while True:
         blue.on()
         sleep(1)
         break
 
+elif maxindex == 1:
+    red = LED(23)
+    print("DOS Attack")
+    print("--- %s seconds ---" % (time.time() - start_time))
+    while True:
+        red.on()
+        sleep(1)
+        break
+
 elif maxindex == 2:
-    yellow = LED(16)
+    green = LED(24)
     print("FUZZY attack")
     print("--- %s seconds ---" % (time.time() - start_time))
     while True:
-        yellow.on()
+        green.on()
         sleep(1)
         break
 
